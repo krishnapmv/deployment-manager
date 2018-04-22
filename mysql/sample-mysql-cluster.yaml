@@ -11,10 +11,11 @@ resources:
     machineType: n1-standard-1
     image: "https://www.googleapis.com/compute/v1/projects/debian-cloud/global/images/family/debian-9"
     zones:
+    - asia-south1-a
     - asia-south1-b
     - asia-south1-c
-    network: gci-partnernetwork
-    subnetwork: s1-asia-south1
+    network: <your VPC network>
+    subnetwork: <your subnet>
     dataDiskSize: 10
     dataDiskType: pd-standard
     diskPerNode: 1
