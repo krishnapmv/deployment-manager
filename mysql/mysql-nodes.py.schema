@@ -1,0 +1,48 @@
+info:
+  title: MySQL Cluster
+  author: (Krishna PMV) 
+  description: |
+    A MySQL Cluster (master/slave) which can be run across multiple zones in a
+    single region. 
+  version: 0.1
+
+properties:
+  zones:
+    type: array
+    description: an array of zones which indicates the zones in which the current and new versions are to be deployed
+
+  image:
+    type: string
+    description: a fully qualified url to the vm image to use
+
+  nodesPerZone:
+    type: integer
+    description: the minimum number of vms in each instance group
+    default: 1
+
+  machineType:
+    type: string
+    default: n1-standard-1
+
+  network:
+    type: string
+    description: name of network
+
+  subnetwork:
+    type: string
+    description: name of subnet
+
+  dataDiskSize:
+    type: integer
+    description: size in GB for the data disks
+
+  dataDiskType:
+    type: string
+    description: type of data disks
+
+  diskPerNode:
+    type: integer
+    description: number of data disk per node
+
+  assignPublicIp:
+    type: boolean
